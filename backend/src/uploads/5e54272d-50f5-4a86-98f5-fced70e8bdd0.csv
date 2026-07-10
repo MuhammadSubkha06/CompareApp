@@ -1,0 +1,12 @@
+﻿LAPORAN DATA DAN STATUS PROPERTI 2026,,,,,
+,,,,,
+ID_Produk,Nama_Properti Baru,Kategori Baru,Kota Baru,Harga_Jual Baru,Status Baru
+P001,Cluster Alamanda Baru,Rumah Baru,Jakarta Baru,1501341011,Terjual Baru
+P002,Griya Asri H-12 Baru,Rumah Baru,Bandung Baru,744486032,Tersedia Baru
+P003,Villa Senja A-5 Baru,Villa Baru,Bogor Baru,2048169764,Terjual Baru
+P004,Apartemen Skyline B Baru,Apartemen Baru,Jakarta Baru,1231421178,Tersedia Baru
+P005,Ruko Sentra Niaga Baru,Ruko Baru,Surabaya Baru,3079714530,Terjual Baru
+P006,Cluster Alamanda 2 Baru,Rumah Baru,Jakarta Baru,1553469401,Tersedia Baru
+P007,Griya Asri E-01 Baru,Rumah Baru,Bandung Baru,806428014,Terjual Baru
+P008,Villa Senja B-2 Baru,Villa Baru,Bogor Baru,2262695567,Tersedia Baru
+,,,Total Nilai Properti: Baru,=SUM(E4:E11) Baru,

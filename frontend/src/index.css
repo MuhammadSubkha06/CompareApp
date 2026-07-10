@@ -1,0 +1,14 @@
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #24324a;
+  background: #f5f7fb;
+}
+
+button, input, select {
+  font: inherit;
+}

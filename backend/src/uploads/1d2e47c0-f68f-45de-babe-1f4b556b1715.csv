@@ -1,0 +1,9 @@
+ID_Produk,Nama_Properti,Kategori,Kota,Harga_Jual,Status
+P001,Cluster Alamanda,Rumah,Jakarta,1500000000,Terjual
+P002,Griya Asri H-12,Rumah,Bandung,750000000,Tersedia
+P003,Villa Senja A-5,Villa,Bogor,2100000000,Terjual
+P004,Apartemen Skyline B,Apartemen,Jakarta,1250000000,Tersedia
+P005,Ruko Sentra Niaga,Ruko,Surabaya,3200000000,Terjual
+P006,Cluster Alamanda 2,Rumah,Jakarta,1600000000,Tersedia
+P007,Griya Asri E-01,Rumah,Bandung,800000000,Terjual
+P008,Villa Senja B-2,Villa,Bogor,2250000000,Tersedia
