@@ -35,9 +35,10 @@ export default function HistoryTable({ rows, onViewDetail }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {rows.map(row => (
+                    {rows.map((row, index) => (
                         <tr key={row.sessionId}>
-                            <td>{row.sessionId}</td>
+                            {/* Ganti row.sessionId menjadi index + 1 */}
+                            <td>{index + 1}</td>
                             <td className="text-truncate" style={{ maxWidth: "160px" }}>
                                 <i className="bi bi-file-earmark me-1 text-muted"></i>
                                 {row.fileNameA}

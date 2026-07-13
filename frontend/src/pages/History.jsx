@@ -68,8 +68,7 @@ export default function History() {
 
     const filteredRows = useMemo(() => {
 
-        return rows.filter(row => {
-
+        const filtered = rows.filter(row => {
             const matchType = typeFilter === "ALL" || row.compareType === typeFilter;
 
             const keyword = search.toLowerCase();
@@ -79,6 +78,8 @@ export default function History() {
 
             return matchType && matchSearch;
         });
+
+        return filtered.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
 
     }, [rows, search, typeFilter]);
 
@@ -106,11 +107,11 @@ export default function History() {
                         <div className="input-group input-group-sm" style={{ maxWidth: "260px" }}>
                             <span className="input-group-text bg-white"><i className="bi bi-search text-muted"></i></span>
                             <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Cari nama file..."
-                            value={search}
-                            onChange={(e) => setSearch(e.target.value)}
+                                type="text"
+                                className="form-control"
+                                placeholder="Cari nama file..."
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
                             />
                         </div>
 

@@ -1,21 +1,18 @@
-/**
- * compareEngine.js
- * Logic inti untuk membandingkan 2 kumpulan data (rowsA vs rowsB)
- * berdasarkan sebuah Primary Key.
- *
- * Dipakai oleh: services/compareService.js
- */
 
 function normalize(value) {
     if (value === null || value === undefined) return "";
     return String(value).trim().toLowerCase();
 }
 
-/**
- * Mendeteksi jenis perbandingan berdasarkan ekstensi 2 file.
- * @param {string} extA
- * @param {string} extB
- */
+function omitKey(row, primaryKey) {
+    const copy = {};
+    for (const column of Object.keys(row)) {
+        if (column === primaryKey) continue;
+        copy[column] = row[column] ?? "";
+    }
+    return copy;
+}
+
 export function detectCompareType(extA, extB) {
     const a = (extA || "").toLowerCase();
     const b = (extB || "").toLowerCase();
@@ -62,7 +59,8 @@ export function compareRows(rowsA, rowsB, primaryKey) {
             results.push({
                 key: rowB[primaryKey],
                 status: "ONLY_FILE_B",
-                differences: []
+                differences: [],
+                data: omitKey(rowB, primaryKey)
             });
             different++;
             continue;
@@ -72,7 +70,8 @@ export function compareRows(rowsA, rowsB, primaryKey) {
             results.push({
                 key: rowA[primaryKey],
                 status: "ONLY_FILE_A",
-                differences: []
+                differences: [],
+                data: omitKey(rowA, primaryKey)
             });
             different++;
             continue;

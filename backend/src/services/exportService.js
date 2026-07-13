@@ -20,6 +20,20 @@ function flattenResults(detail) {
             }
 
         }
+        else if ((item.status === "ONLY_FILE_A" || item.status === "ONLY_FILE_B") && item.data) {
+
+            const isiData = Object.entries(item.data)
+                .map(([col, val]) => `${col}: ${val}`)
+                .join(", ");
+
+            rows.push({
+                [detail.primaryKey]: item.key,
+                Status: item.status,
+                Kolom: "",
+                [`Nilai (${detail.fileNameA})`]: item.status === "ONLY_FILE_A" ? isiData : "",
+                [`Nilai (${detail.fileNameB})`]: item.status === "ONLY_FILE_B" ? isiData : ""
+            });
+        }
         else {
             rows.push({
                 [detail.primaryKey]: item.key,

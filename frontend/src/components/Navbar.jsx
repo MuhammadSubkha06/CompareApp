@@ -30,11 +30,11 @@ export default function Navbar() {
                 <button className="btn btn-light border d-lg-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-label="Buka menu">
                     <i className="bi bi-list fs-5"></i>
                 </button>
-                <img
-                    src="/denso/Header.png"
+                {/* <img
+                    src="/denso/Header2.png"
                     alt="CompareApp"
-                    className="navbar-logo"
-                />
+                    className="navbar-logo ms-4"
+                /> */}
 
                 <div className="d-flex align-items-center gap-4">
 

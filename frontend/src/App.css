@@ -276,3 +276,92 @@ body {
     padding: 1.25rem !important;
   }
 }
+
+
+/* ===== Compare / History detail ===== */
+
+.status-badge{
+    font-size:.75rem;
+    font-weight:600;
+    padding:.4em .65em;
+    letter-spacing:.2px;
+}
+
+.table-sticky thead th{
+    position:sticky;
+    top:0;
+    z-index:1;
+}
+
+.row-status-danger td{ background:rgba(220,53,69,.04); }
+.row-status-warning td{ background:rgba(255,193,7,.06); }
+.row-status-info td{ background:rgba(13,202,240,.06); }
+
+/* Tabel mini untuk daftar perbedaan kolom (status: Berbeda) */
+.diff-table{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.diff-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:4px 8px;
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:6px;
+    font-size:.8rem;
+}
+
+.diff-field{
+    min-width:110px;
+    font-weight:600;
+    color:#495057;
+}
+
+.diff-values{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    flex-wrap:wrap;
+}
+
+.diff-old{
+    background:rgba(220,53,69,.12);
+    color:#842029;
+    padding:1px 8px;
+    border-radius:4px;
+    text-decoration:line-through;
+    text-decoration-color:rgba(220,53,69,.5);
+}
+
+.diff-new{
+    background:rgba(25,135,84,.12);
+    color:#0f5132;
+    padding:1px 8px;
+    border-radius:4px;
+    font-weight:600;
+}
+
+.diff-arrow{
+    font-size:1.1rem;
+    color:#6c757d;
+}
+
+/* Chip data untuk baris "Hanya di File A/B" */
+.only-data-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+}
+
+.only-data-chip{
+    background:#f1f3f5;
+    border:1px solid #e9ecef;
+    border-radius:6px;
+    padding:2px 8px;
+    font-size:.78rem;
+    color:#212529;
+}

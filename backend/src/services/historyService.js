@@ -3,9 +3,6 @@ import {
     getHistoryById
 } from "../repositories/compareRepository";
 
-/**
- * Daftar riwayat compare untuk halaman History (ringkas, tanpa detail baris).
- */
 export async function listHistory() {
 
     const rows = await getHistoryList();
